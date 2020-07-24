@@ -86,6 +86,26 @@ body {
 #game-canvas {
   margin-top: 34px;
   z-index: 2;
+  position: relative;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: url("../images/game/game_bg1.png");
+  background-size: cover;
+  animation-duration: 80s;
+  animation-name: bgslide;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+@keyframes bgslide {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
 }
 
 .game-btn-space {
