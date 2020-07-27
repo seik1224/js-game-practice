@@ -8,7 +8,14 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "rules": { "prettier/prettier": ["error"] },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  },
   "plugins": ["prettier"],
   "parser": "babel-eslint"
 }
