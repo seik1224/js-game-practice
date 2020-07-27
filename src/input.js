@@ -34,10 +34,12 @@ document.addEventListener("keyup", handler);
 // a를 누르면 { x: -1, y: 0 }리턴하는 함수
 // a, w 누르면 { x: -1, y: -1 }
 export function getMovement() {
-  return {
-    x: (keyState.a && -1) + (keyState.d && 1),
-    y: (keyState.w && -1) + (keyState.s && 1),
-  };
+  let x = (keyState.a && -1) + (keyState.d && 1);
+  let y = (keyState.w && -1) + (keyState.s && 1);
+  const distance = Math.sqrt(x ** 2 + y ** 2);
+  x /= distance;
+  y /= distance;
+  return { x, y };
 }
 
 export function isFired(keyCode) {
