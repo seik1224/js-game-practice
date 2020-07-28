@@ -23,6 +23,14 @@ npm ERR!     C:\Users\jeong\AppData\Roaming\npm-cache\_logs\2020-07-20T12_53_50_
 npm install
 ```
 
+### webpack-dev-server 오류 뜰때
+1. node_modules\webpack-dev-server 폴더 삭제
+2. 재설치
+```console
+npm install
+```
+[참고](https://stackoverflow.com/questions/41576446/npm-start-error-with-webpack-dev-server)
+
 # 프로젝트 실행법
 ```console
 npm start
