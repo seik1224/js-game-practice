@@ -23,6 +23,8 @@ export default class Game {
   update() {
     this.gameObjects.forEach((go) => go.update());
   }
+  // 여기 부분 이해 안됌
+  // update 함수를 어디에서 받아온건 아닌거 같은데 extends 랑 super 키워드 왜 안쓰는지
 
   start() {
     setInterval(() => this.update(), 1000 / this.fps);
